@@ -1,0 +1,21 @@
+{
+  "name": "node-jssample",
+  "version": "0.0.0",
+  "description": "NodeJSSample",
+  "main": "app.js",
+  "author": {
+    "name": "Rcanf",
+    "email": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "jquery": "^2.2.3",
+    "jwt-simple": "^0.5.0",
+    "morgan": "^1.7.0",
+    "serve-favicon": "^2.3.0",
+    "stylus": "^0.54.2"
+  }
+}
