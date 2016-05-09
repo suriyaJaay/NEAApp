@@ -1,0 +1,23 @@
+﻿<div class="row">
+    <div class="loginDiv">
+        <div class="well well-lg">
+            <h2>{{loginVM.title}}</h2>
+            <p>
+                <input type="text" placeholder="Username" ng-model="loginVM.un" class="form-control" style="margin-bottom:10px;" />
+                <input type="text" placeholder="Password" ng-model="loginVM.pw" class="form-control" />
+            </p>
+            <p ng-if="loginVM.error != null" style="color:red;">
+                <b>
+                    <span class="glyphicon glyphicon-remove-sign"></span>
+                    <span>{{loginVM.error}}</span>
+                </b>
+            </p>
+            <br />
+            <div class="modalDiv">
+                <button type="button" class="jump btn btn-primary btn-lg" ng-click="loginVM.login()">Login</button>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

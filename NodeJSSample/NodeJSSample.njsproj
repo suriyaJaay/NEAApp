@@ -30,26 +30,58 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="api\auth.js" />
     <Compile Include="api\routes.js" />
+    <Compile Include="api\home.js" />
     <Compile Include="api\users.js" />
     <Compile Include="app.js" />
-    <Compile Include="public\javascripts\app.js" />
-    <Compile Include="public\javascripts\controllers.js" />
-    <Compile Include="public\javascripts\services.js" />
+    <Compile Include="app\controllers\errorController.js" />
+    <Compile Include="app\controllers\homeController.js" />
+    <Compile Include="app\controllers\loginController.js" />
+    <Compile Include="app\controllers\navController.js" />
+    <Compile Include="app\controllers\usersController.js" />
+    <Compile Include="app\directives.js" />
+    <Compile Include="app\security.js" />
+    <Compile Include="app\services\authServices.js" />
+    <Compile Include="app\services\homeServices.js" />
+    <Compile Include="app\services\modalServices.js" />
+    <Compile Include="app\services\securityServices.js" />
+    <Compile Include="app\services\tokenInterceptor.js" />
+    <Compile Include="app\services\userServices.js" />
+    <Compile Include="app\resolver.js" />
+    <Compile Include="config\secret.js" />
+    <Compile Include="gulpfile.js" />
+    <Compile Include="app\app.js" />
+    <Compile Include="app\controllers\controllers.js" />
+    <Compile Include="middleware\authModule.js" />
+    <Compile Include="middleware\validateRequest.js" />
+    <Compile Include="public\javascripts\main.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\user.js" />
+    <Content Include="app\views\home\login.html" />
+    <Content Include="app\views\login.html" />
+    <Content Include="app\views\modals.html" />
     <Content Include="package.json" />
+    <Content Include="public\favicon.ico" />
     <Content Include="public\stylesheets\style.styl" />
-    <Content Include="public\templates\error.html" />
-    <Content Include="public\templates\home.html" />
-    <Content Include="public\templates\index.html" />
-    <Content Include="public\templates\users.html" />
+    <Content Include="app\views\error.html" />
+    <Content Include="app\views\home\home.html" />
+    <Content Include="app\views\index.html" />
+    <Content Include="app\views\users\users.html" />
     <Content Include="README.md" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="api\" />
+    <Folder Include="app\" />
+    <Folder Include="app\controllers\" />
+    <Folder Include="app\services\" />
+    <Folder Include="app\views\" />
+    <Folder Include="app\views\home\" />
+    <Folder Include="app\views\users\" />
+    <Folder Include="middleware\" />
+    <Folder Include="config\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />

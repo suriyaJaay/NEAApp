@@ -1,0 +1,74 @@
+﻿<div bn-modals
+     ng-show="subview"
+     class="m-modals"
+     ng-switch="subview">
+
+    <!-- BEGIN: Alert Modal. -->
+    <div ng-switch-when="login"
+         ng-controller="loginController as loginVM"
+         class="modalWindow">
+        <h3>
+            {{ loginVM.title }}
+        </h3>
+        <p>
+            <input type="text" placeholder="Username" ng-model="loginVM.un" class="form-control" style="margin-bottom:10px;" />
+            <input type="text" placeholder="Password" ng-model="loginVM.pw" class="form-control" />
+        </p>
+        <p ng-if="loginVM.error != null" style="color:red;">
+            <b>
+                <span class="glyphicon glyphicon-remove-sign"></span>
+                <span>{{loginVM.error}}</span>
+            </b>
+        </p>
+        <br />
+        <div class="modalDiv">
+            <button type="button" class="jump btn btn-primary" ng-click="loginVM.login()">Login</button>
+            <button type="button" class="jump btn btn-primary" ng-click="loginVM.close()">Close</button>
+        </div>
+    </div>
+    <!-- END: Alert Modal. -->
+    <!-- BEGIN: Confirm Modal. -->
+    <div ng-switch-when="confirm"
+         ng-controller="ConfirmModalController"
+         class="modalWindow">
+
+        <p>
+            {{ message }}
+        </p>
+
+        <p>
+            <a ng-click="confirm()">{{ confirmButton }}</a>
+            &mdash;
+            <a ng-click="deny()">{{ denyButton }}</a>
+        </p>
+
+    </div>
+    <!-- END: Confirm Modal. -->
+    <!-- BEGIN: Prompt Modal. -->
+    <form ng-switch-when="prompt"
+          ng-controller="PromptModalController"
+          ng-submit="submit()"
+          class="modalWindow">
+
+        <p>
+            {{ message }}
+        </p>
+
+        <p ng-if="errorMessage">
+            <strong>Sorry:</strong> {{ errorMessage }}
+        </p>
+
+        <p>
+            <input type="text" ng-model="form.input" />
+        </p>
+
+        <p>
+            <a ng-click="submit()">Submit</a>
+            &mdash;
+            <a ng-click="cancel()">Cancel</a>
+        </p>
+
+    </form>
+    <!-- END: Prompt Modal. -->
+
+</div>
